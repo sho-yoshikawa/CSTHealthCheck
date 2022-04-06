@@ -3,6 +3,7 @@ from selenium.webdriver.common.alert import Alert
 from myutils import editTextByID, randFloat, clickElementByClass
 
 NOTHING = "特になし"
+NORMAL_TEMP = 36.2
 
 # inputYestData for click dismiss modal. bad code, sry...
 
@@ -38,7 +39,7 @@ def inputPMTemp(b):
 
 
 def inputTemp(b, f_am, f_pm):
-    inputNormalTemp(b, 35.8)
+    inputNormalTemp(b, NORMAL_TEMP)
     if f_am and not f_pm:
         inputAMTemp(b)
         return
